@@ -6,7 +6,12 @@ class Board:
         """
         Draw the board of Tic-Tac-Toe game
         """
-
+        print("  0 1 2")  # Column headers
+        for i, row in enumerate(self.grid):
+            print(i, "|".join(row))  # Print each row with a separator
+            if i < 2:  # Print a separator line between rows
+                print("  -----")
+                
     def update_board(self, row: int, col: int, symbol: str) -> bool:
         """
         Update the game board based on location selected by player
